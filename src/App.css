@@ -11,44 +11,36 @@
   margin: 0 auto;
 }
 
-/* 
-
-.products{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.card{
+.form{
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  width: 310px;
-  border: 3px solid rgb(31, 93, 31);
-  border-radius: 8px;
-  padding: 20px;
+  align-items: center;
+  gap: 20px;
 
-  img{
-    width: 265px;
-    height: 250px;
-    border: 1px solid rgb(31, 93, 31);
-  }
-
-  h1{
-    font-size: 21px;
-    color: rgb(56, 89, 56);
-  }
-  h2{
-    color: red;
-  }
-  p{
-    color: rgb(56, 89, 56);
+  input{
+    width: 50%;
+    height: 40px;
 
   }
-  h3{
-    color: red;
-    margin-bottom: -10px;
+
+  textarea{
+    width: 50%;
+    height: 80px;
   }
-} */
+
+  button{
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(4, 72, 4);
+    font-size: 22px;
+    color: white;
+
+  }
+
+  button:hover {
+    background-color: rgb(37, 166, 37);
+  }
+}
