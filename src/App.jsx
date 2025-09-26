@@ -55,6 +55,14 @@ function App() {
     }
   }
 
+  async function updateProduct(id, updateProductInfo) {
+    const res = await axios.put(`${API}/${id}`, updateProductInfo)
+    if(res.status == 200){
+      getProducts()
+    }
+    
+  }
+
   useEffect(() => {
     getProducts();
   }, []);
@@ -86,10 +94,10 @@ function App() {
           onChange={(e) =>
             setNewProduct({ ...newProduct, img: e.target.value })
           }
-        />
-        <textarea
+        /><textarea
           type="text"
-          placeholder="Product Discription"
+       
+           placeholder="Product Discription"
           value={newProduct.description}
           onChange={(e) =>
             setNewProduct({ ...newProduct, description: e.target.value })
@@ -103,6 +111,7 @@ function App() {
             product={obj}
             key={index}
             deleteProduct={deleteProduct}
+            updateProduct={updateProduct}
           />
         ))}
       </div>
